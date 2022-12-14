@@ -7,7 +7,8 @@ mkdir -p $XDG_CONFIG_HOME
 mkdir -p $XDG_CONFIG_HOME/log
 
 # install homeshick
-git clone https://github.com/andsens/homeshick.git $XDG_DATA_HOME/homesick/repos/homeshick
+export HOMESHICK_DIR=$XDG_DATA_HOME/homesick/repos/homeshick
+git clone https://github.com/andsens/homeshick.git $HOMESHICK_DIR
 
 # download the castle
 $XDG_DATA_HOME/homesick/repos/homeshick/bin/homeshick clone suzusime/shijo
